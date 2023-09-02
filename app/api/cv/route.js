@@ -8,7 +8,6 @@ export async function GET() {
   await connectMongoDB();
   const cvs = await Cv.find();
     return NextResponse.json({ cvs });
-    
 }
 
 export async function POST(request) {
@@ -17,8 +16,6 @@ export async function POST(request) {
   await Cv.create({ name, id, email, phone, linkedinUrl, file, rawData});
   return NextResponse.json({ message: "Cv Created" }, { status: 201 });
 }
-
-
 
 export async function DELETE(request) {
   const id = request.nextUrl.searchParams.get("id");

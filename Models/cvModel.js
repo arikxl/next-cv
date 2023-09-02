@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 
 const cvSchema = new mongoose.Schema(
     {
-        id: { type: Number, required: false, unique: true,  },
+        id: { type: String, required: false  },
         name: { type: String, required: false },
         email: { type: String, required: false },
         phone: { type: String, required: false },
